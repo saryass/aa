@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ********************************************************/
+/* Row4   in   main-container */
+/* ******************************************************/
+.row4 {
+    border-bottom: 1px solid #b4b4b4;
+    padding-bottom: 50px;
+    /* to move (border-bottom) downward */
+}
+
+/* ********************************************************/
+/* row4-block   in   Row4   */
+/* ******************************************************/
+.row4-block {
+    display: flex;
+    gap: 10px;
+}
+
+/* ********************************************************/
+/* row4-box   in   row4-block   */
+/* ******************************************************/
+.row4-box {
+    /* border: 1px solid black; */
+    width: 33.3333%;
+}
+
+/* ********************************************************/
+/* row4-title   in   row4-box    */
+/* ******************************************************/
+.row4-title {
+    /* background-color: yellow; */
+    color: #001f44;
+    font-size: 1.1em;
+    /* padding-bottom: 20px; */
+    /* to make a vertical space with (row4-img-box) */
+
+    /* padding-left: 5px; */
+    display: flex;
+    align-items: center;
+    /* width: fit-content; */
+}
+
+.LINE {
+    /* border: 1px solid red; */
+    width: 100%;
+    position: relative;
+
+}
+
+.LINE::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.TITLE-LINE {
+    /* border: 1px dashed blue; */
+    /* background-color: pink; */
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+#ME {
+    white-space: nowrap;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+}
+
+/* ********************************************************/
+/* row4-img-box   in   row4-box  */
+/* ******************************************************/
+.row4-img-box {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 232px;
+}
+
+.row4-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/* ********************************************************/
+/* headlines   in   row4-box   */
+/* ******************************************************/
+.headlines {
+    /* border: 1px dashed orchid; */
+    display: flex;
+    flex-direction: column;
+    /* even though without using flex-box they are in a column, but i used flex-box to be able to give a  vertical gap sapace btw his elements ;) */
+    gap: 30px;
+    /* to make a vertical space btw his elements*/
+    margin-top: 22px;
+    /* to make a vertical space btw itself and above element, which is  <p class="paragraph> */
+}
+
+.little-dot-red {
+    /* border: 1px solid blue; */
+    /* background-color: pink; */
+    width: 94%;
+    color: #001f44;
+    padding-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.little-dot-red::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    display: block;
+    position: absolute;
+    top: 9px;
+    right: 0;
+}
+
+.little-dot-grey::before {
+    background-color: gray;
+    /* this element is in row11 */
+}
+
+.little-dot-light-grey::before {
+    background-color: #9ecce0;
+    /* this element is in row11 */
+}
+
+.little-dot-red:hover {
+    text-decoration: underline;
+}
+
+
+
+
+@media screen and (max-width:480px) {
+    body {
+        background-color: pink;
+    }
+
+
+    .row4-block {
+        flex-direction: column;
+        gap:20px;
+    }
+
+    .row4 {
+        width: 90%;
+        margin: 0 auto;
+        border: 2px solid red;
+    }
+
+    .row4-box {
+        width: 100%;
+    }
+
+}
